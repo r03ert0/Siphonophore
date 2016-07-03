@@ -1,0 +1,262 @@
+<div id="insertMainMenu" class="inner-nav navbar-desktop">
+  <ul class="clearlist scroll scroll-nav">
+	<li class="active"><a class="active" style="height: 75px; line-height: 75px;" href="#hero">Home</a></li>
+	<li><a style="height: 75px; line-height: 75px;" href="#videos">Videos</a></li>
+	<li><a style="height: 75px; line-height: 75px;" href="#games">Games</a></li>
+	<li><a style="height: 75px; line-height: 75px;" href="#contacts">Contacts</a></li>
+	<li><a style="height: 75px; line-height: 75px;" href="javascript:location.reload()">Log Out</a></li>
+  </ul>
+</div>
+<div id="insertPage" class="page">
+  <!--Videos Start-->
+  <section id="videos" class="bg-light pb-40">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12 text-center">
+		  <h3>Your <b>Videos</b></h3>
+		</div>
+	  </div>
+	</div>
+	
+	<ul class="filter text-center mt-60 mt-xs-30">
+	  <li class="active"><a href="#" data-filter="*">All videos</a></li>
+	  <li><a href="#" data-filter=".miyazaki">Miyazaki</a></li>
+	  <li><a href="#" data-filter=".chapulin">Chapulin</a></li>
+	  <li><a href="#" data-filter=".robotech">Robotech</a></li>
+	  <li><a href="#" data-filter=".other">Other</a></li>
+	</ul>
+	<div class="container">
+	  <div style="position:relative;height:750px;visibility:hidden;animation-duration:2s;animation-delay:0.1s;animation-name:none;" data-wow-delay="0.1s" data-wow-duration="2s" class="work-container mt-40 mt-xs-20 wow fadeIn">
+		<div id="my-media" class="row">
+		  <script>
+			var i,rc=[0,0,0,0],media=[
+				{name:"Princess Mononoke",src:"img/mononoke.jpg",alt:"Princesse Mononoke",href:"media/mononoke.mp4",group:"miyazaki"},
+				{name:"Nausicaa from the Valley of the Wind",src:"img/nausicaa.jpg",alt:"Godzilla",href:"media/godzilla1954.mp4",group:"miyazaki"},
+				{name:"Mon Voisin Totoro",src:"img/totoro.jpg",alt:"Totoro",href:"media/totoro.mp4",group:"miyazaki"},
+				{name:"Godzilla (1954)",src:"img/godzilla.jpg",alt:"Godzilla",href:"media/video.html?v=Gojira_1954.m4v&t=Gojira_1954.vtt",group:"other"},
+				{name:"The Song of the Sea",src:"img/song-of-the-sea.jpg",alt:"Song of the Sea",href:"media/song-of-the-sea.mp4",group:"other"},
+				{name:"Chapulín Colorado",src:"img/chapulin.jpg",alt:"Chapulín Colorado",href:"media/chapulin.mp4",group:"chapulin"},
+				{name:"Robotech, Capítulo 1",src:"img/robotech-1.jpg",alt:"Robotech 1",href:"media/video.html?v=Robotech 1.mp4",group:"robotech"},
+				{name:"Robotech, Capítulo 2",src:"img/robotech-2.jpg",alt:"Robotech 2",href:"media/video.html?v=Robotech 2.mp4",group:"robotech"},
+				{name:"Robotech, Capítulo 3",src:"img/robotech-3.jpg",alt:"Robotech 3",href:"media/video.html?v=Robotech 3.mp4",group:"robotech"},
+				{name:"Robotech, Capítulo 4",src:"img/robotech-4.jpg",alt:"Robotech 4",href:"media/video.html?v=Robotech 4.mp4",group:"robotech"},
+				{name:"Robotech, Capítulo 5",src:"img/robotech-5.jpg",alt:"Robotech 5",href:"media/video.html?v=Robotech 5.mp4",group:"robotech"}
+			];
+			function loadImages(i) {
+				if(i>=4) {
+					var h=$("img[src='"+media[i-4].src+"']").height();
+					rc[i%4]+=h+20;
+				}
+				$("#my-media").append([
+					'<div style="position:absolute; left:'+((i%4)*285)+'px; top:'+rc[i%4]+'px;" class="col-md-3 col-sm-4 col-xs-12 work-item '+media[i].group+'">',
+					'	<div class="figure effect-hover"><img src="'+media[i].src+'" alt="'+media[i].alt+'">',
+					'		<div class="figcaption">',
+					'			<h5 class="alt-font">'+media[i].name+'</h5>',
+					'			<p>'+media[i].group+'</p>',
+					'		</div>',
+					'		<a href="'+media[i].href+'">View more</a>',
+					'	</div>',
+					'</div>'].join("\n")
+				);
+				$("img[src='"+media[i].src+"']").load(function() {
+					if(i<media.length-1)
+						loadImages(i+1);
+				});
+			}
+			loadImages(0);
+		  </script>
+		</div>
+	  </div>
+	</div>
+
+  </section>
+  <!--Videos End-->
+  
+  <!--Games Start-->
+  <section id="games" class="bg-light pb-40">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12 text-center">
+		  <h3>Your <b>Games</b></h3>
+		</div>
+	  </div>
+	  
+	  <div style="position: relative; height: 390.983px;" class="row blog-masonry mt-60 mt-xs-10">
+		<div style="position: absolute; left: 0px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Rhythm">
+			<div class="post-thumbnail"><img src="img/thumbanil_rhythm.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Rhythm</h4>
+			</div></a></div>
+		<div style="position: absolute; left: 390px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Arpeggios">
+			<div class="post-thumbnail"><img src="img/thumbnail_arpeggios.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Arpeggios</h4>
+			</div></a></div>
+		<div style="position: absolute; left: 780px; top: 0px;" class="col-md-4 hidden-sm post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Kandinsky">
+			<div class="post-thumbnail"><img src="img/thumbnail_kandinsky.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Kandinsky</h4>
+			</div></a></div>
+	  </div>
+	  
+	  <div style="position: relative; height: 390.983px;" class="row blog-masonry mt-60 mt-xs-10">
+		<div style="position: absolute; left: 0px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Oscillators">
+			<div class="post-thumbnail"><img src="img/thumbnail_oscillators.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Oscillators</h4>
+			</div></a></div>
+		<div style="position: absolute; left: 390px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Spectrogram">
+			<div class="post-thumbnail"><img src="img/thumbnail_spectrogram.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Spectrogram</h4>
+			</div></a></div>
+		<div style="position: absolute; left: 780px; top: 0px;" class="col-md-4 hidden-sm post-masonry blog-post"><a href="https://musiclab.chromeexperiments.com/Voice-Spinner">
+			<div class="post-thumbnail"><img src="img/thumbnail_voicespinner.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Voice Spinner</h4>
+			</div></a></div>
+	  </div>
+	</div>
+  </section>
+  <!--Games End-->      
+  
+  <!--Contacts Start-->
+  <section id="contacts" class="bg-light pb-40">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12 text-center">
+		  <h3>Your <b>Contacts</b></h3>
+		</div>
+	  </div>
+	  <div style="position: relative; height: 390.983px;" class="row blog-masonry mt-60 mt-xs-10">
+		<div style="position: absolute; left: 0px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="http://dexifly.com/exline/blog-single.html">
+			<div class="post-thumbnail"><img src="img/blog-1.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Mum</h4>
+			  <div class="date-post">September 03, 2015</div>
+			  <p> Lorem ipsum dolor sit amet, consectetur 
+adipisicing elit. Voluptatem rerum suscipit a aut, ex tempora! 
+Recusandae ratione tempore distinctio modi.</p>
+			</div></a></div>
+		<div style="position: absolute; left: 390px; top: 0px;" class="col-md-4 col-sm-6 post-masonry blog-post"><a href="http://dexifly.com/exline/blog-single.html">
+			<div class="post-thumbnail"><img src="img/blog-2.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Dad</h4>
+			  <div class="date-post">September 03, 2015</div>
+			  <p> Lorem ipsum dolor sit amet, consectetur 
+adipisicing elit. Voluptatem rerum suscipit a aut, ex tempora! 
+Recusandae ratione tempore distinctio modi.</p>
+			</div></a></div>
+		<div style="position: absolute; left: 780px; top: 0px;" class="col-md-4 hidden-sm post-masonry blog-post"><a href="http://dexifly.com/exline/blog-single.html">
+			<div class="post-thumbnail"><img src="img/blog-3.jpg" alt="" class="resp"></div>
+			<div class="post-content">
+			  <h4 class="post-title">Bro</h4>
+			  <div class="date-post">September 03, 2015</div>
+			  <p> Lorem ipsum dolor sit amet, consectetur 
+adipisicing elit. Voluptatem rerum suscipit a aut, ex tempora! 
+Recusandae ratione tempore distinctio modi.</p>
+			</div></a></div>
+	  </div>
+	  <div class="row mt-60">
+		<div class="col-md-12 text-center"><a href="http://dexifly.com/exline/blog.html" class="btn btn-coffee btn-border">Read more</a></div>
+	  </div>
+	</div>
+  </section>
+  <!--Contacts End-->   
+
+  <!--Log out Start-->
+  <section id="logout">
+	<div class="container">
+	  <div class="row mt-40 mt-xs-20">
+		<div class="col-md-12 text-center">
+		  <h3>Plans <b>Available</b></h3>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-8 col-md-offset-2 text-center mt-10 mt-xs-10">
+		  <p> Lorem ipsum dolor sit amet, consectetur adipisicing 
+elit. Laudantium quia tempore, rem quis iste saepe in omnis aspernatur 
+eligendi asperiores.</p>
+		</div>
+	  </div>
+	  <div style="visibility: hidden; animation-duration: 1s; animation-delay: 0.1s; animation-name: none;" data-wow-delay="0.1s" data-wow-duration="1s" class="row mt-80 mt-xs-40 wow zoomIn">
+		<div class="col-sm-6 col-md-4">
+		  <div class="pricing-item">
+			<div class="pricing-inner">
+			  <div class="pricing-content">
+				<div class="pricing-icon"><i class="icon-bike"></i></div>
+				<div class="pricing-title">Basic</div>
+				<div class="pricing-features alt-font">
+				  <ul class="sf-list pricing-list">
+					<li><b>1 Gb  </b>Storage</li>
+					<li> <b>3  </b>Domain Names</li>
+					<li> <b>5 </b>FTP Users</li>
+					<li> <b>Free </b>Support</li>
+				  </ul>
+				</div>
+				<div class="pricing-cost"><sup>$</sup>20</div>
+				<div class="pricing-period">month</div>
+				<div class="pricing-button"><a href="#" class="btn btn-coffee">Buy Now</a></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+		  <div class="pricing-item pricing-main">
+			<div class="pricing-inner">
+			  <div class="pricing-content">
+				<div class="pricing-icon"><i class="icon-aperture"></i></div>
+				<div class="pricing-title">Popular</div>
+				<div class="pricing-features alt-font">
+				  <ul class="sf-list pricing-list">
+					<li><b>10 Gb  </b>Storage</li>
+					<li> <b>10  </b>Domain Names</li>
+					<li> <b>Unlimited </b>FTP Users</li>
+					<li> <b>Free </b>Support</li>
+				  </ul>
+				</div>
+				<div class="pricing-cost"><sup>$</sup>40</div>
+				<div class="pricing-period">month</div>
+				<div class="pricing-button"><a href="#" class="btn btn-coffee">Buy Now</a></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+		  <div class="pricing-item">
+			<div class="pricing-inner">
+			  <div class="pricing-content">
+				<div class="pricing-icon"><i class="icon-hotairballoon"></i></div>
+				<div class="pricing-title">Premier</div>
+				<div class="pricing-features alt-font">
+				  <ul class="sf-list pricing-list">
+					<li><b>50 Gb  </b>Storage</li>
+					<li> <b>Unlimited </b>Domain Names</li>
+					<li> <b>Unlimited </b>FTP Users</li>
+					<li> <b>Free </b>Support</li>
+				  </ul>
+				</div>
+				<div class="pricing-cost"><sup>$</sup>100</div>
+				<div class="pricing-period">month</div>
+				<div class="pricing-button"><a href="#" class="btn btn-coffee">Buy Now</a></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!--Pricing Start-->
+  
+  <!-- Page Footer Start-->
+  <footer class="page-footer">
+	<div class="container text-center">
+	  <!-- Social links-->
+	  <div class="social-links"><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a><a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a><a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a><a href="#" title="Pinterst" target="_blank"><i class="fa fa-pinterest"></i></a></div>
+	  <div class="copy-right mt-50"><a href="#" class="alt-font">© Exline 2015</a>
+		<p>Made with love</p>
+	  </div>
+	</div><a href="#top" class="scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
+  </footer>
+  <!-- Page footer end -->
+</div>

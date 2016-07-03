@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-mobile skrollr skrollr-desktop">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="http://siphonophore.org/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
+    <title>siphonophore</title>
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style_002.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/et-line.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/owl.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/vertical.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link id="theme" href="css/theme-blue.css" rel="stylesheet">
+  <style id="fit-vids-style">
+  	.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}
+  </style>
+  <!--
+  <script style="" src="js/common.js" charset="UTF-8" type="text/javascript"></script>
+  <script src="js/util.js" charset="UTF-8" type="text/javascript"></script>
+  <script src="js/stats.js" charset="UTF-8" type="text/javascript"></script>
+	-->
+</head>
+  <body class="appear-animate">
+    
+    <!-- Page Loader Start-->
+    <div style="display: none;" class="page-loader">
+      <div class="loader">Loading</div><span class="loader-text alt-font">siphonophore</span>
+    </div>
+    
+    <!--Page Lader End-->
+    <div id="top"></div>
+    <!-- Navigation panel-->
+    <nav class="main-nav white stick-fixed js-transparent transparent">
+      <div class="full-wrapper relative clearfix">
+        <!-- Logo ( paste you text or image)-->
+        <div class="nav-logo-wrap"><a id="login" href="#" onclick="myLogin()" class="logo">Log in</a></div>
+        <div style="height: 75px; line-height: 75px; width: 75px;" class="navbar-mobile"><i class="fa fa-bars"></i></div>
+
+		<!-- Main Menu -->
+		<div id="mainMenu">
+		</div>
+		<!--           -->
+      </div>
+    </nav>
+    
+    <!--section hero-->
+    <section style="background-image: url(&quot;media/video.jpg&quot;);" id="hero" data-background="media/video.jpg" class="full-screen bg-dark-50 bg-img">
+      <div style="transform: translate3d(0px, 0px, 0px);" data-top="transform: translate3d(0px, 0px, 0px)" data-top-bottom="transform: translate3d(0px, -200px, 0px)" data-anchor-target="#hero" class="parallax parallax-hero full-screen skrollable skrollable-between">
+        <div class="bg-video-wrapper"><video id="video_background" preload="auto" autoplay="autoplay" loop="true" style="position: absolute; top: 0px; left: -6px; bottom: 0px; right: 0px; z-index: -100; width: 1811.56px; height: 1019px;"><source src="media/video.mp4" type="video/mp4"><source src="video.html" type="video/ogg"><source src="media/video.webm" type="video/webm">bgvideo</video>
+          <div class="bg-video-overlay bg-dark-50"></div>
+        </div>
+        <div class="hero-content">
+          <div id="replace-with-login" class="hero-content-inner">
+            <h1 style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInDown;" data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-4 wow fadeInDown">siphonophore</h1>
+            <div style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeIn;" data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-2 wow fadeIn">your web everywhere</div>
+          </div>
+		  <a id="scrolldown" style="display:none" href="#about" class="btn-scroll-down scroll"></a>
+      </div>
+    </section>
+    
+	<!-- Page -->
+    <div id="page">
+    </div>
+	<!--      -->
+
+    <!--JS sctipts-->
+    <script src="js/jquery-2.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/plagins.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/gmap3.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_004.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery_003.js"></script>
+    <script src="js/contact-form.js"></script>
+    <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+    
+    <!--Delete after config-->
+    <script src="js/style.js"></script>
+    <script src="js/jquery_002.js"></script>
+    
+    <script>
+    	function myLogin() {
+    		$("#replace-with-login").html([
+    			"<p style='font-size:4rem'><i class='fa fa-user'></i></p>",
+    			"<input id='user-name' style='color:black' type='text' />",
+    			"<p style='font-size:4rem'><i class='fa fa-lock'></i></p>",
+    			"<input id='user-password' style='color:black' onchange='change()' type='password' />"].join(""));
+    	}
+    	function myLogout() {
+    		localStorage.Siphonophore=null;
+    		location.reload();
+    	}
+    	function change() {
+    		var n=$("#user-name").val();
+    		var p=$("#user-password").val();
+    		
+    		if(n=="ada" && p=="pastel")
+    			loadUser();
+    	}
+    	function loadUser() {
+			localStorage.Siphonophore=JSON.stringify(new Date());
+			$.get("ada2.html",function(data) {
+				/* Load user page */
+				var mainMenu=$(data)[0];
+				var page=$(data)[2];
+				$("#mainMenu").html(mainMenu);
+				$("#page").html(page);
+	
+				/* Configure user name */
+				$("#login").html("Ada Esmeralda");
+	
+				/* Configure hero text */
+				$("#replace-with-login").html([
+					'<h1 style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInDown;" data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-4 wow fadeInDown">siphonophore</h1>',
+					'<div style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeIn;" data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-2 wow fadeIn">your web everywhere</div>'
+				].join(""));
+				$("#scrolldown").css({display:"inline"});
+			});
+    	}
+
+		// If last login is more recent than 2 hours, just enter
+		var date_last=null;
+		var date_now=new Date();
+		if(localStorage.Siphonophore) {
+			date_last=new Date(JSON.parse(localStorage.Siphonophore));
+		}
+		if(date_last && date_now) {
+			var diff_in_hours=(date_now-date_last)/1000/60/60;
+			if(diff_in_hours<2)
+		    	loadUser();
+		}
+	
+    </script>
+  
+</body></html>
